@@ -1,0 +1,19 @@
+{
+    "name"       : "davidkuhner/regex-visualization",
+    "description": "Example of regex visualization",
+    "type"       : "library",
+    "license"    : "BSD-3-Clause",
+    "authors"    : [
+        {
+            "name" : "David Kuhner",
+            "email": "dav.kuhn@gmail.com"
+        }
+    ],
+    "require": {
+        "davidkuhner/graphictools" : "dev-master",
+        "davidkuhner/regex"        : "dev-master",
+        "hoa/compiler"             : "dev-master",
+        "hoa/regex"                : "dev-master"
+    },
+    "minimum-stability": "dev"
+}
