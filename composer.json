@@ -13,7 +13,8 @@
         "davidkuhner/graphictools" : "dev-master",
         "davidkuhner/regex"        : "dev-master",
         "hoa/compiler"             : "dev-master",
-        "hoa/regex"                : "dev-master"
+        "hoa/regex"                : "dev-master",
+        "hoa/console"              : "dev-master"
     },
     "minimum-stability": "dev"
 }
