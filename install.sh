@@ -6,7 +6,7 @@ echo -e "\tphp5-gd library"
 echo -e "\tfirefox library"
 echo -e "\nWill be downloaded : \n"
 echo -e "\tcomposer.phar"
-echo -e "\nWill be runed : \n"
+echo -e "\nWill be executed : \n"
 echo -e "\tcomposer install\n"
 
 echo "Press enter to proceed :"
