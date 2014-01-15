@@ -56,7 +56,7 @@ function man() {
 	echo "Regex visualization manual\n\n";
 	
 	echo "How to :\n";
-	echo "\tphp visualization.php "[REGEX]"\n\n";
+	echo "\tphp visualization.php \"[REGEX]\"\n\n";
 	
 	echo "Examples :\n";
 	echo "\tphp visualization.php \"[ab]?\"\n";
