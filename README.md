@@ -6,7 +6,7 @@ The tryVisualization.php script is an example application of the project compile
 
 tryVisualization system dependencies :
 - php5-gd module
-- firefox ( If you have another favorite web-browser, you can edit the try-visualisation.php line 45 )
+- firefox ( If you have another favorite web-browser, you can edit the tryVisualisation.php line 45 )
 
 tryVisualization HOA dependencies :
 - davidkuhner/graphictools
@@ -14,7 +14,7 @@ tryVisualization HOA dependencies :
 - hoa/compiler
 - hoa/regex
 
-
+Installation :
 1. Install the system dependencies.
 2. Run standard composer install to resolve HOA dependacies.
 
@@ -32,6 +32,6 @@ Exemples :
 * $ php tryVisualization.php "\\-{0,1}\\d*\\.{0,1}\\d+"
 * $ php tryVisualization.php "([as]+(asdf)|m[æi]?)|[wi]{2,1}"
 
-References
+References :
 * [1] https://github.com/davidkuhner/compiler-visualization
 * [2] http://hoa-project.net
