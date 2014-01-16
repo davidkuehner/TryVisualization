@@ -15,8 +15,8 @@ tryVisualization HOA dependencies :
 - hoa/regex
 
 Installation :
-1. Install the system dependencies.
-2. Run standard composer install to resolve HOA dependacies.
+* Install the system dependencies.
+* Run standard composer install to resolve HOA dependacies.
 
 
 Debian/Ubuntu users can use the install.sh script to resolve dependencies guided by an assistante.
