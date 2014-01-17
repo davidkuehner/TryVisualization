@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 // Based on hoa-project documentation : http://hoa-project.net/Fr/Literature/Hack/Compiler.html
 
 if($argc <= 1 || $argc >3) {
-	man();
+	help();
 }
 
 // 1. Load grammar.
@@ -51,23 +51,23 @@ try {
 	} else {
 		echo "\nSorry something goes wrong with \"$argv[1]\"";
 	}
-	man();
+	help();
 }
 
 
 
-// Man page
-function man() {
+// Help page
+function help() {
 	echo "\n\n----------------------------------------------------\n";
-	echo "Try Visualization manual\n\n";
+	echo "Try Visualization help page\n\n";
 	
 	echo "How to :\n";
-	echo "\tphp visualization.php \"[REGEX]\" [PARAM]\n\n";
+	echo "\tphp tryVisualization.php \"[REGEX]\" [PARAM]\n\n";
 	
 	echo "Examples :\n";
-	echo "\tphp visualization.php \"[ab]?\"\n";
-	echo "\tphp visualization.php \"([as]+(asdf)|m[æi]?)|[wi]{2,1}\"\n";
-	echo "\tphp visualization.php \"\\-{0,1}\\d*\\.{0,1}\\d+\"\n\n";
+	echo "\tphp tryVisualization.php \"[ab]?\"\n";
+	echo "\tphp tryVisualization.php \"([as]+(asdf)|m[æi]?)|[wi]{2,1}\"\n";
+	echo "\tphp tryVisualization.php \"\\-{0,1}\\d*\\.{0,1}\\d+\"\n\n";
 	
 	echo "Requirements :\n";
 	echo "\tComposer install\n";
