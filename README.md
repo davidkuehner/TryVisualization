@@ -1,7 +1,7 @@
-Regex Visualization
+Try Visualization
 ===================
 
-The tryVisualization.php script is an example application of the project compiler-visualization [1] based on HOA libraries [2].
+The tryVisualization.php script is an example application for regex of the project compiler-visualization [1] based on HOA libraries [2].
 
 
 tryVisualization system dependencies :
@@ -15,7 +15,7 @@ tryVisualization HOA dependencies :
 
 Installation :
 --------------
-* Run standard composer install to resolve dependacies.
+* Run standard composer install to resolve dependacies [3].
 
 
 Use : 
@@ -32,3 +32,4 @@ References :
 ------------
 * [1] https://github.com/davidkuhner/compiler-visualization
 * [2] http://hoa-project.net
+* [3] http://getcomposer.org/doc/00-intro.md#installation-nix
