@@ -15,7 +15,7 @@ tryVisualization HOA dependencies :
 
 Installation :
 --------------
-* Run standard composer install to resolve dependacies.
+* Run standard composer install to resolve dependacies [3].
 
 
 Use : 
@@ -32,3 +32,4 @@ References :
 ------------
 * [1] https://github.com/davidkuhner/compiler-visualization
 * [2] http://hoa-project.net
+* [3] http://getcomposer.org/doc/00-intro.md#installation-nix
