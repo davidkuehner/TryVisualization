@@ -10,10 +10,11 @@
         }
     ],
     "require": {
+		"php"                      : ">=5.4.*",
         "davidkuhner/graphictools" : "dev-master",
         "davidkuhner/regex"        : "dev-master",
         "hoa/compiler"             : "dev-master",
         "hoa/regex"                : "dev-master"
     },
-    "minimum-stability": "dev"
+    "minimum-stability" : "dev"
 }
