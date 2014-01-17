@@ -34,32 +34,35 @@ try {
 	echo "\n\n";
 
 	// only for demo purpose
-	if($argc == 3 &&  $argv[2] == '-f') 
-	{
+	if($argc == 3 &&  $argv[2] == '-f') {
 		// 5 Save the SVG in a file and open it with Firefox;
 		echo "Press enter to load the svg in Firefox :";
 		trim(fgets(STDIN));
 		exec("rm image.svg 2> /dev/null");
 		$file = new Hoa\File\Write('image.svg');
-		$file->writeString('<svg class="expression" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >'); // temp
 		$file->writeString( $svg );
-		$file->writeString('</svg>');// temp
 		exec("firefox image.svg 2> /dev/null");
 	}
 
 } catch (Exception $e) {
-	echo "\nParsing error : ",$e->getMessage(), "\n\n";
+	if($argc == 3 &&  $argv[2] == '-v') 
+	{
+		echo "\nParsing error : ",$e->getMessage();
+	} else {
+		echo "\nSorry something goes wrong with \"$argv[1]\"";
+	}
 	man();
 }
+
 
 
 // Man page
 function man() {
 	echo "\n\n----------------------------------------------------\n";
-	echo "Regex visualization manual\n\n";
+	echo "Try Visualization manual\n\n";
 	
 	echo "How to :\n";
-	echo "\tphp visualization.php \"[REGEX]\"\n\n";
+	echo "\tphp visualization.php \"[REGEX]\" [PARAM]\n\n";
 	
 	echo "Examples :\n";
 	echo "\tphp visualization.php \"[ab]?\"\n";
@@ -68,7 +71,11 @@ function man() {
 	
 	echo "Requirements :\n";
 	echo "\tComposer install\n";
-	echo "\tphp5-gd library\n";
+	echo "\tphp5-gd library\n\n";
+	
+	echo "Second optional parameter :\n";
+	echo "\t-v : Verbose mode for exceptions\n";
+	echo "\t-f : Visualization of the SVG in Firefox\n";
 	
 	echo "\n----------------------------------------------------\n\n";
 	exit();
