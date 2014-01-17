@@ -3,7 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 // Based on hoa-project documentation : http://hoa-project.net/Fr/Literature/Hack/Compiler.html
 
-if($argc <= 1) {
+if($argc <= 1 || $argc >3) {
 	man();
 }
 
@@ -33,16 +33,19 @@ try {
 	echo $svg;
 	echo "\n\n";
 
-
-	// 5 Load the SVG code in an HTML page;
-	echo "Press enter to load the svg in Firefox :";
-	trim(fgets(STDIN));
-	exec("rm index.html 2> /dev/null");
-	$file = new Hoa\File\Write('index.html');
-	$file->writeString('<!DOCTYPE html><html><head><meta charset="utf-8" /><title>Regex - Visualisation</title></head><body>');
-	$file->writeString( $svg );
-	$file->writeString('</body></html>');
-	exec("firefox index.html 2> /dev/null");
+	// only for demo purpose
+	if($argc == 3 &&  $argv[2] == '-f') 
+	{
+		// 5 Save the SVG in a file and open it with Firefox;
+		echo "Press enter to load the svg in Firefox :";
+		trim(fgets(STDIN));
+		exec("rm image.svg 2> /dev/null");
+		$file = new Hoa\File\Write('image.svg');
+		$file->writeString('<svg class="expression" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >'); // temp
+		$file->writeString( $svg );
+		$file->writeString('</svg>');// temp
+		exec("firefox image.svg 2> /dev/null");
+	}
 
 } catch (Exception $e) {
 	echo "\nParsing error : ",$e->getMessage(), "\n\n";
@@ -66,7 +69,6 @@ function man() {
 	echo "Requirements :\n";
 	echo "\tComposer install\n";
 	echo "\tphp5-gd library\n";
-	echo "\tfirefox\n";
 	
 	echo "\n----------------------------------------------------\n\n";
 	exit();
