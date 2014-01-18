@@ -30,6 +30,6 @@ Exemples :
 
 References :
 ------------
-* [1] https://github.com/davidkuhner/compiler-visualization
+* [1] https://github.com/davidkuhner/CompilerVisualization
 * [2] http://hoa-project.net
 * [3] http://getcomposer.org/doc/00-intro.md#installation-nix
