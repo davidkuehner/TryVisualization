@@ -1,13 +1,13 @@
 Try Visualization
 ===================
 
-The tryVisualization.php script is an example application for regex of the project compiler-visualization [1] based on HOA libraries [2].
+The tryVisualization.php script is an example application for  Perl Compatible Regular Expressions (PCRE) of the project Compiler Visualization [1] based on Hoa libraries [2].
 
 
 tryVisualization system dependencies :
 - php5-gd module
 
-tryVisualization HOA dependencies :
+tryVisualization Hoa dependencies :
 - davidkuhner/graphictools
 - davidkuhner/regex
 - hoa/compiler
