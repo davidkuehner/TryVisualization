@@ -75,7 +75,7 @@ function help() {
 	
 	echo "Second optional parameter :\n";
 	echo "\t-v : Verbose mode for exceptions\n";
-	echo "\t-f : Visualization of the SVG in Firefox\n";
+	echo "\t-f : Visualization of the SVG in Firefox, Linux only\n";
 	
 	echo "\n----------------------------------------------------\n\n";
 	exit();
