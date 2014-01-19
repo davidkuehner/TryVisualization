@@ -32,16 +32,30 @@ try {
 	echo "Computed in $time sec \n\n";
 	echo $svg;
 	echo "\n\n";
-
-	// only for demo purpose
-	if($argc == 3 &&  $argv[2] == '-f') {
-		// 5 Save the SVG in a file and open it with Firefox;
-		echo "Press enter to load the svg in Firefox :";
-		trim(fgets(STDIN));
-		exec("rm image.svg 2> /dev/null");
-		$file = new Hoa\File\Write('image.svg');
+    
+    // 5. Save in a file.
+    if($argc == 3 &&  ( $argv[2] == '-s' || $argv[2] == '-b') ) {
+        $filename = 'image.svg';
+        $file = new Hoa\File\Write($filename);
 		$file->writeString( $svg );
-		exec("firefox image.svg 2> /dev/null");
+        $file->close();
+    }
+
+	// 6. Open the file in a browser
+	if($argc == 3 &&  $argv[2] == '-b') {
+		echo "Press enter to load the svg in a browser :";
+		trim(fgets(STDIN));
+
+        $uname = strtolower(php_uname());
+        if (strpos($uname, "darwin") !== false) {
+            exec("open " . "." . DIRECTORY_SEPARATOR . $filename);
+        } else if (strpos($uname, "win") !== false) {
+            exec("start " . getcwd() . DIRECTORY_SEPARATOR . $filename);
+        } else if (strpos($uname, "linux") !== false) {
+            exec("sensible-browser " . "." . DIRECTORY_SEPARATOR . $filename . " 2> /dev/null");
+        } else {
+            echo "\nSorry something goes wrong with your OS version : ", $uname ;
+        }
 	}
 
 } catch (Exception $e) {
@@ -75,7 +89,8 @@ function help() {
 	
 	echo "Second optional parameter :\n";
 	echo "\t-v : Verbose mode for exceptions\n";
-	echo "\t-f : Visualization of the SVG in Firefox\n";
+	echo "\t-s : Save the SVG as image.svg\n";
+	echo "\t-b : Visualization of the SVG in a browser\n";
 	
 	echo "\n----------------------------------------------------\n\n";
 	exit();
