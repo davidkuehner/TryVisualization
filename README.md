@@ -24,6 +24,7 @@ Use :
 
 Exemples :
 ----------
+* $ php tryVisualization.php
 * $ php tryVisualization.php "[ab]?"
 * $ php tryVisualization.php "\\-{0,1}\\d*\\.{0,1}\\d+"
 * $ php tryVisualization.php "([as]+(asdf)|m[æi]?)|[wi]{2,1}"
