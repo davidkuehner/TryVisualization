@@ -36,7 +36,7 @@ try {
     // 5. Save in a file.
     if($argc == 3 &&  ( $argv[2] == '-s' || $argv[2] == '-b') ) {
         $filename = 'image.svg';
-        $file = new Hoa\File\Write($filename);
+        $file = new Hoa\File\Write($filename, Hoa\File::MODE_TRUNCATE_WRITE);
 		$file->writeString( $svg );
         $file->close();
     }
