@@ -24,7 +24,8 @@ try {
 
 	// 4. Visualize the AST.
 	echo "\n\nFrom Graphic visitor\n---------------------\n\n";
-	$visu = new \Hoathis\Regex\Visitor\Visualization();
+	$svgCreator = new \Hoathis\GraphicTools\SvgCreator();
+	$visu = new \Hoathis\Regex\Visitor\Visualization( $svgCreator );
 	$time_start = microtime(true);
 	$svg = $visu->visit($ast);
 	$time_end = microtime(true);
@@ -84,7 +85,7 @@ function help() {
 	
 	echo "Examples :\n";
 	echo "\tphp tryVisualization.php \"[ab]?\"\n";
-	echo "\tphp tryVisualization.php \"([as]+(asdf)|m[æi]?)|[wi]{2,1}\"\n";
+	echo "\tphp tryVisualization.php \"([as]+(asdf)|m[ai]?)|[wi]{2,1}\"\n";
 	echo "\tphp tryVisualization.php \"\\-{0,1}\\d*\\.{0,1}\\d+\"\n\n";
 	
 	echo "Requirements :\n";
