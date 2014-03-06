@@ -31,6 +31,8 @@ Exemples :
 
 References :
 ------------
-* [1] https://github.com/davidkuhner/CompilerVisualization
+* [1] https://github.com/davidkuhner/CompilerVisualization  /!\ no more maintenance, see [4] and [5]
 * [2] http://hoa-project.net
 * [3] http://getcomposer.org/doc/00-intro.md#installation-nix
+* [4] https://github.com/davidkuhner/Regex
+* [5] https://github.com/davidkuhner/GraphicTools
