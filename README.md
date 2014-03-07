@@ -22,7 +22,7 @@ Use :
 -----
 * $ php tryVisualisation.php "[REGEX]"
 
-Exemples :
+Examples :
 ----------
 **1** $ php tryVisualization.php
 
