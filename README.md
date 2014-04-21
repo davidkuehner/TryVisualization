@@ -30,11 +30,11 @@ Examples :
 
 ![sample1](https://dl.dropboxusercontent.com/u/43124690/Hoa/sample1.svg)
 
-**3** $ php tryVisualization.php "\\-{0,1}\\d*\\.{0,1}\\d+"
+**3** $ php tryVisualization.php "([as]+(asdf)|m[æi]?)|[wi]{2,1}"
 
 ![sample2](https://dl.dropboxusercontent.com/u/43124690/Hoa/sample2.svg)
 
-**4** $ php tryVisualization.php "([as]+(asdf)|m[æi]?)|[wi]{2,1}"
+**4** $ php tryVisualization.php "\\-{0,1}\\d*\\.{0,1}\\d+"
 
 ![sample3](https://dl.dropboxusercontent.com/u/43124690/Hoa/sample3.svg)
 
